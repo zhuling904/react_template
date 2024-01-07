@@ -6,14 +6,34 @@
   "scripts": {
     "lint": "npm run lint-eslint && npm run lint-stylelint",
     "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
-    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss} --fix"
+    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss} --fix",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "prettier --write ./src",
+      "eslint --ext .vue,.js,.jsx --fix ./src",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-conventional": "^18.4.4",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.18.0",
+    "commitizen": "^4.3.0",
+    "commitlint": "^18.4.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.0.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -24,6 +44,8 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "stylelint": "^16.1.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
@@ -36,6 +58,11 @@
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.0",
     "typescript": "^5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "dependencies": {
     "prettier": "^3.1.1",

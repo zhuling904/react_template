@@ -8,3 +8,4 @@ node_modules
 disk
 build
 .stylelintrc.js
+.lintstagedrc.json
