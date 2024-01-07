@@ -26,12 +26,12 @@ module.exports = {
   },
   plugins: ['react', 'promise', '@typescript-eslint'],
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.tsx', '.ts', '.js', '.json'],
-      },
-      typescript: {},
-    },
+	'import/resolver': {
+	  node: {
+		extensions: ['.tsx', '.ts', '.js', '.json'],
+	  },
+	  typescript: {},
+	},
   },
   rules: {
     'import/extensions': [

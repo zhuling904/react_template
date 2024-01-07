@@ -9,3 +9,4 @@ dist
 build
 .stylelintrc.js
 .lintstagedrc.json
+scripts
