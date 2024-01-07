@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from '@components/Header';
 import style from './style/index.less';
+import { add } from './index.ts';
 
 interface IProps {
 	name: string;
@@ -11,6 +12,7 @@ interface IProps {
 
 function App(props: IProps) {
 	const { name, age } = props;
+	add(1, 3);
 	return (
 		<div className={style.app}>
 			<Header />
