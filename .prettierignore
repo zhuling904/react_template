@@ -5,7 +5,7 @@
 .eslintrc.js
 .editorconfig
 node_modules
-disk
+dist
 build
 .stylelintrc.js
 .lintstagedrc.json
