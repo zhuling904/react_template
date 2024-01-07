@@ -9,7 +9,8 @@ const getCssLoaders = (importLoaders) => [
 	{
 		loader: 'css-loader',
 		options: {
-			modules: false,
+			// 开启css module，不开启无法使用import style from './style/index.less';
+			modules: true,
 			sourceMap: isDev,
 			importLoaders,
 		},
