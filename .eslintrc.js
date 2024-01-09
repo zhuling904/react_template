@@ -9,11 +9,12 @@ module.exports = {
     node: true,
   },
   extends: [
-    'airbnb',
-    'airbnb/hooks',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+	'airbnb',
+	'airbnb/hooks',
+	'plugin:react/recommended',
+	'plugin:@typescript-eslint/recommended',
 	'prettier',
+	'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -24,7 +25,11 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'promise', '@typescript-eslint'],
+  plugins: [
+	'react',
+	'promise',
+	'@typescript-eslint'
+  ],
   settings: {
 	'import/resolver': {
 	  node: {
